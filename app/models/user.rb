@@ -4,15 +4,26 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
 
+  has_many :identities, dependent: :destroy
+
   validates_format_of :email, with: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i, message: "incorrect email format"
 
 
   def self.from_omniauth(auth)
-   where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-     user.provider = auth.provider
-     user.uid = auth.uid
-     user.email = auth.info.email
-     user.password = Devise.friendly_token[0,20]
-   end
+    identity = Identity.where(provider: auth.provider, uid: auth.uid)
+    if identity.present?
+      return identity.first.user
+    else
+      user = User.where(email: auth.info.email)
+      if user.present?
+        Identity.create(provider: auth.provider, uid: auth.uid, user_id: user.first.id)
+        return user.first
+      else
+        user = User.create(email: auth.info.email, password: Devise.friendly_token[0,20])
+        Identity.create(provider: auth.provider, uid: auth.uid, user_id: user.id)
+        return user
+      end
+    end
   end
+
 end
