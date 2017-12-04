@@ -1,0 +1,27 @@
+.flex-box
+  .flex-item
+    = render 'patient'
+  .flex-item
+    = render 'doctor'
+  .flex-item
+    = render 'appointment'
+  .flex-item
+    .content.content-last
+      .head View appointments
+      .hr
+      - if @appointments.present?
+        table.ap-table
+          tr
+            th Patient
+            th Doctor
+            th Disease
+          - @appointments.each do |appointment|
+            tr
+              td
+                = appointment.patient.name
+              td
+                = appointment.doctor.name
+              td
+                = appointment.disease
+      - else
+        h4 No appointments made yet.

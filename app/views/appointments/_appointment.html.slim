@@ -1,0 +1,11 @@
+.content
+  .head Appointment
+  .hr
+  .form
+    = simple_form_for @appointment do |f|
+      = f.association :doctor, collection: Doctor.order(:name), prompt: "Doctor name", input_html: { class: 'form-control'}, label: false
+      = f.association :patient, collection: Patient.order(:name), prompt: "Patient name", input_html: { class: 'form-control'}, label: false
+      = f.input :disease, input_html: { class: 'form-control', placeholder: 'Disease' }, label: false
+      = f.button :submit, 'Submit', class: 'btn-submit appointment-submit'
+  #notice
+    = notice

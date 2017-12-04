@@ -25,6 +25,11 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-oauth2', '~> 1.3.1'
 
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'jquery-rails'
+gem 'simple_form'
+gem 'slim-rails'
+gem 'rails-assets-sweetalert'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

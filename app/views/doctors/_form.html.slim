@@ -1,0 +1,10 @@
+= simple_form_for(@doctor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :phone_no
+    = f.input :specialization
+
+  .form-actions
+    = f.button :submit

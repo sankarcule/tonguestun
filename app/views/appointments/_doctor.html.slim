@@ -1,0 +1,11 @@
+.content
+  .head Doctor
+  .hr
+  .form
+    = simple_form_for @doctor do |f|
+      = f.input :name, input_html: { class: 'form-control', placeholder: 'Name' }, label: false
+      = f.input :phone_no, input_html: { class: 'form-control', placeholder: 'Phone no' }, label: false
+      = f.input :specialization, input_html: { class: 'form-control', placeholder: 'Specialization' }, label: false
+      = f.button :submit, 'Submit', class: 'btn-submit doctor-submit'
+  #notice
+    = notice

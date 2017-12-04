@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @patient.name
+p
+  strong Phone no:
+  = @patient.phone_no
+
+= link_to 'Edit', edit_patient_path(@patient)
+'  |
+= link_to 'Back', patients_path
