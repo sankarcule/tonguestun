@@ -23,14 +23,13 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-oauth2', '~> 1.3.1'
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'slim-rails'
-gem 'rails-assets-sweetalert'
-
+gem 'rails-assets-sweetalert', "~> 1.1.3"
+gem 'font-awesome-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

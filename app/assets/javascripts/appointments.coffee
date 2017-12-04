@@ -71,3 +71,10 @@ $(document).on 'click', '.appointment-submit', (e)->
     }
     return true
   $('#new_appointment').submit();
+
+
+$(document).on 'click', '.login, .signup', ()->
+  $('.login').toggleClass('active')
+  $('.signup').toggleClass('active')
+  $('.login-content').toggleClass('hidden')
+  $('.signup-content').toggleClass('hidden')

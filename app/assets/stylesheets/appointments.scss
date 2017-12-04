@@ -95,3 +95,97 @@ body {
     }
   }
 }
+
+
+.page-content {
+  width: 40%;
+  margin: 15vh auto;
+
+  .header {
+    font-size: 24px;
+    display: flex;
+    width: 35%;
+    margin: 10px auto;
+    .login {
+      margin-right: 5%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .signup {
+      margin-left: 5%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .active {
+      color: #4e83f5;
+    }
+  }
+
+  .links {
+    .btn-facebook {
+      padding: 10px 20px;
+      background-color: #3b5998 ;
+      color: white ;
+      border: none;
+      margin-top: 20px;
+      width: 220px;
+      margin-left: 10px;
+    }
+
+    .btn-google {
+      padding: 10px 20px;
+      background-color: #d34836 ;
+      color: white ;
+      border: none;
+      margin-top: 20px;
+      width: 220px;
+      margin-right: 10px;
+      float: right;
+    }
+  }
+
+
+  .line {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      margin: 20px auto;
+
+      &:before {
+          border-top: 2px solid #dfdfdf;
+          content:"";
+          margin: 0 auto;
+          position: absolute;
+          top: 50%; left: 0; right: 0; bottom: 0;
+          width: 95%;
+          z-index: -1;
+      }
+
+      span {
+          background: #fff;
+          padding: 0 15px;
+          color: #dfdfdf;
+          font-size: 20px;
+      }
+  }
+  .login-content , .signup-content {
+    margin: 5px 10px;
+  }
+  .btn-submit {
+    padding: 10px 20px;
+    background-color: #4e87ff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    width: 97%;
+    margin-left: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .hidden {
+    display: none;
+  }
+}
