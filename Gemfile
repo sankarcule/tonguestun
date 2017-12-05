@@ -29,9 +29,7 @@ gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'slim-rails'
-source "https://rails-assets.org" do
-  gem "rails-assets-sweetalert", "~> 1.1.3"
-end
+gem 'sweetalert-rails'
 gem 'font-awesome-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
