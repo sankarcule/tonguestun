@@ -7,4 +7,7 @@
       = f.input :phone_no, input_html: { class: 'form-control', placeholder: 'Phone no' }, label: false
       = f.button :submit, 'Submit', class: 'btn-submit patient-submit'
   #notice
-    = notice
+    - if notice.present?
+      - note = notice.downcase
+      - if "patient".in? note
+        = notice

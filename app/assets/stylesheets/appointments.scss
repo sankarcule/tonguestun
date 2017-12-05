@@ -5,6 +5,9 @@
 body {
   margin: 0px !important;
 }
+.mt30 {
+  margin-top: 30px;
+}
 .flex-box {
   display: flex;
   flex-direction: row;
@@ -15,6 +18,7 @@ body {
   .flex-item {
     width: 50%;
     padding: 30px;
+    position: relative;
 
     &:first-child, &:last-child {
       background-color: #c7c6bf;
@@ -22,11 +26,18 @@ body {
 
     .content-last {
       width: 95% !important;
+      top: 15% !important;
+      left: 3% !important;
+      margin: 0 auto !important;
     }
 
     .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 30%;
       width: 50%;
-      margin: 0 auto;
+      margin: -15% 0 0 -25%;
 
       .head {
         text-align: center;

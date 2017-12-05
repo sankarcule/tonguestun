@@ -31,7 +31,7 @@ class DoctorsController < ApplicationController
         format.html { redirect_to appointments_url, notice: 'Doctor was successfully created.' }
         format.json { render :show, status: :created, location: @doctor }
       else
-        format.html { render :new }
+        format.html { redirect_to appointments_url }
         format.json { render json: @doctor.errors, status: :unprocessable_entity }
       end
     end
