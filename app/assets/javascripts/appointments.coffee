@@ -20,7 +20,6 @@ $(document).on 'click', '.patient-submit', (e)->
     return true
   $('#new_patient').submit();
 
-
 $(document).on 'click', '.doctor-submit', (e)->
   e.preventDefault()
   name = $('#doctor_name').val()
@@ -78,3 +77,46 @@ $(document).on 'click', '.login, .signup', ()->
   $('.signup').toggleClass('active')
   $('.login-content').toggleClass('hidden')
   $('.signup-content').toggleClass('hidden')
+
+$(document).on 'click', '.login-submit', (e)->
+  e.preventDefault()
+  email = $('.login-email').val()
+  pwd = $('.login-pwd').val()
+  if (email == '')
+    swal {
+        title: 'Woops! Please type your email..'
+        type: "warning"
+    }
+    return true
+  if (pwd == '')
+    swal {
+        title: 'Woops! Please type your password..'
+        type: "warning"
+    }
+    return true
+  $('#new_user').submit();
+
+$(document).on 'click', '.signup-submit', (e)->
+  e.preventDefault()
+  email = $('.signup-email').val()
+  pwd = $('.signup-pwd').val()
+  c_pwd = $('.signup-confirm-pwd').val()
+  if (email == '')
+    swal {
+        title: 'Woops! Please type your email..'
+        type: "warning"
+    }
+    return true
+  if (pwd == '')
+    swal {
+        title: 'Woops! Please type your password..'
+        type: "warning"
+    }
+    return true
+  if (c_pwd == '')
+    swal {
+        title: 'Woops! Please type your confirm password..'
+        type: "warning"
+    }
+    return true
+  $('#new_user').submit();
