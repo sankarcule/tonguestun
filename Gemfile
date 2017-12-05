@@ -28,7 +28,7 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'slim-rails'
-gem 'rails-assets-sweetalert', source: 'https://rails-assets.org'
+gem 'rails-assets-sweetalert', source: 'http://insecure.rails-assets.org'
 gem 'font-awesome-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
